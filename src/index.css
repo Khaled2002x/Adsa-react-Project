@@ -1,0 +1,113 @@
+.navbar {
+  background-color: #161616 !important;
+  color: white;
+}
+ul {
+  list-style: none;
+}
+.container_nav {
+  color: white;
+}
+.logo_image {
+  max-height: 2.5rem;
+}
+.content_brand_text {
+  font-size: 16px;
+}
+.content_brand_text_P {
+  color: #ab5f0b;
+}
+p,
+button,
+a {
+  color: #919191;
+  cursor: pointer;
+}
+.navbar-nav {
+  border: 0.125rem solid #1d1d1d;
+}
+.active {
+  background-color: #f64d00;
+  border-radius: 1.25rem;
+  color: white;
+}
+.read_btn {
+  background-color: #f64d00;
+  border-radius: 1.25rem;
+  color: white;
+  transition: 0.3s;
+}
+.read_btn:hover {
+  transform: translateY(-0.3125rem);
+}
+
+.main {
+  background-color: #1d1d1d;
+}
+.hero_section {
+  background-color: #0a0a0a;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+h1 {
+  font-size: 3rem;
+}
+.fn {
+  color: #fa9f1e;
+}
+.online {
+  border: 0.0625rem solid #341d0c;
+  border-radius: 1.25rem;
+  padding: 0.625rem;
+  color: white;
+  text-align: center;
+  background-color: #24160b;
+}
+.advice {
+  color: #a1a193;
+}
+.learn_more {
+  outline: none;
+  border-radius: 1.25rem;
+  border: 0.0625rem solid #2e2d2c;
+  transition: 0.3s;
+  color: white;
+  background-color: transparent;
+}
+.learn_more:hover {
+  background-color: #f64d00;
+}
+.address_icon {
+  font-size: 1.875rem;
+  color: #ff6900;
+}
+.inner_info {
+  background-color: #141414;
+  width: 9.375rem;
+  border: 0.0625rem solid #262626;
+}
+.Selected_Articles {
+  margin: auto;
+
+  background: linear-gradient(to right, #0a0a0a 60%, #160e0a);
+}
+.Selected_Articles_inner {
+  width: 80%;
+}
+.Show_all {
+  outline: none;
+  background-color: #fa9f1e;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  color: white;
+}
+.inner_card {
+  border: 0.125rem solid #323232;
+}
+.spechial {
+  background: linear-gradient(to right);
+}
