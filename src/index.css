@@ -66,6 +66,7 @@ h1 {
   color: white;
   text-align: center;
   background-color: #24160b;
+  cursor: pointer;
 }
 .advice {
   color: #a1a193;
@@ -92,6 +93,7 @@ h1 {
 }
 .Selected_Articles {
   margin: auto;
+  border-top: 1px solid gray;
 
   background: linear-gradient(to right, #0a0a0a 60%, #160e0a);
 }
@@ -104,10 +106,43 @@ h1 {
   border-radius: 0.625rem;
   padding: 0.625rem;
   color: white;
+  border: none;
 }
 .inner_card {
   border: 0.125rem solid #323232;
+  height: 25rem;
+  cursor: pointer;
 }
 .spechial {
-  background: linear-gradient(to right);
+  background: linear-gradient(to right, #ff7500 80%, #f3a800);
+}
+.read_only {
+  background-color: #2e2d2c;
+}
+.footer_image {
+  max-height: 3.125rem;
+  border-radius: 50%;
+}
+.Category_section {
+  border-top: 0.0625rem solid #323232;
+  background-color: #140d0a;
+}
+.inner_box {
+  background-color: #161616;
+  border: 0.0625rem solid #262626;
+  border-radius: 0.9375rem;
+  transition: 0.3ms;
+  cursor: pointer;
+}
+.icon {
+  background-color: #2e1e14;
+  color: #ff6901;
+  font-size: 1.25rem;
+}
+.Category_section_content {
+  width: 80%;
+  margin: auto;
+}
+.inner_box:hover {
+  background: linear-gradient(to right, #ff6900 70%, #fe6900);
 }

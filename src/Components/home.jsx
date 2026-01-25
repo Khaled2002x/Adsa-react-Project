@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import src from "../assets/images/OIP.jpeg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faPen, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faGear, faPen } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
+import Data from "../main.json";
+import Posts from "./Posts";
+import CategoryStyle from "./Category";
+
 export default function Home() {
+  const [Post, SetPost] = useState([]);
+  const [Category, SetCategory] = useState([]);
+
+  useEffect(() => {
+    const printed_post = Data.posts;
+    printed_post.length = 3;
+    SetPost(printed_post);
+    SetCategory(Data.categories);
+  }, []);
+
   return (
     <>
       <div className="main  text-white">
@@ -28,7 +42,7 @@ export default function Home() {
             </Link>
             <button className="learn_more rounded-4  p-2">اعرف المزيد</button>
           </div>
-          <div className="info row my-4">
+          <div className="info row my-4 g-3">
             <div className="col-6 col-md-3">
               <div className="inner_info d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
                 <span className="address_icon">
@@ -79,27 +93,31 @@ export default function Home() {
               </div>
               <div className="Selected_Articles_top_left ">
                 <Link to={"/Blog"}>
-                  <button className="Show_all">
+                  <button className="Show_all ">
                     عرض الكل <FontAwesomeIcon icon={faArrowLeft} />{" "}
                   </button>
                 </Link>
               </div>
             </div>
             <div className="Selected_Articles_main row   g-3">
-              <div className="col-12">
-                <div className="inner_card  overflow-hidden   rounded-4 ">
-                  <div className="inner_card_right w-50 position-relative">
-                    <img
-                      src={src}
-                      className="w-100  object-fit-cover h-100"
-                      alt=""
-                    />
-                    <span className=" position-absolute top-0 end-0 mt-2 mx-3 rounded-4 spechial">
-                      <FontAwesomeIcon icon={faStar} />
-                      مميز
-                    </span>
-                  </div>
-                </div>
+              {Post.map((post) => {
+                return <Posts key={post.id} post={post} />;
+              })}
+            </div>
+          </div>
+        </section>
+        <section className="Category_section">
+          <div className="Category_section_content">
+            <div className="Category_section_content_top d-flex flex-column gap-3 text-center align-items-center">
+              <span className="online mt-4">مرحباً بك في عدسة</span>
+              <h2>استكشف حسب الموضوع</h2>
+              <p>اعثر على محتوى مصمم حسب اهتماماتك</p>
+            </div>
+            <div className="Category_section_content_main">
+              <div className="box row g-3">
+                {Category.map((category, index) => {
+                  return <CategoryStyle key={index} categories={category} />;
+                })}
               </div>
             </div>
           </div>
