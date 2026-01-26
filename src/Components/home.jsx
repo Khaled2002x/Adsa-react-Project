@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import ArticalCard from "./Artical-card";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faGear, faPen } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faPen } from "@fortawesome/free-solid-svg-icons";
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import Data from "../main.json";
 import Posts from "./Posts";
 import CategoryStyle from "./Category";
-
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 export default function Home() {
   const [Post, SetPost] = useState([]);
   const [Category, SetCategory] = useState([]);
@@ -23,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="main  text-white">
+      <div className="main  text-white m-auto">
         <section className="hero_section gap-3 d-flex flex-column justify-content-center align-items-center">
           <span className="online mt-4">مرحباً بك في عدسة</span>
           <h1 className="text-center m-0">
@@ -42,9 +43,9 @@ export default function Home() {
             </Link>
             <button className="learn_more rounded-4  p-2">اعرف المزيد</button>
           </div>
-          <div className="info row my-4 g-3">
+          <div className="info row my-4 g-3 m-auto">
             <div className="col-6 col-md-3">
-              <div className="inner_info d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
+              <div className="inner_info m-auto d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
                 <span className="address_icon">
                   <FontAwesomeIcon icon={faAddressBook} />
                 </span>
@@ -53,7 +54,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-6 col-md-3">
-              <div className="inner_info d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
+              <div className="inner_info m-auto d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
                 <span className="address_icon">
                   <FontAwesomeIcon icon={faUsers} />
                 </span>
@@ -62,7 +63,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-6 col-md-3">
-              <div className="inner_info d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
+              <div className="inner_info d-flex m-auto flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
                 <span className="address_icon">
                   <FontAwesomeIcon icon={faFolder} />
                 </span>
@@ -71,7 +72,7 @@ export default function Home() {
               </div>
             </div>
             <div className="col-6 col-md-3">
-              <div className="inner_info d-flex flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
+              <div className="inner_info d-flex m-auto flex-column align-items-center  rounded-4 px-4 py-3  justify-content-center ">
                 <span className="address_icon">
                   <FontAwesomeIcon icon={faPen} />
                 </span>
@@ -82,7 +83,7 @@ export default function Home() {
           </div>
         </section>
         <section className="Selected_Articles p-5">
-          <div className="Selected_Articles_inner  m-auto ">
+          <div className="Selected_Articles_inner   m-auto ">
             <div className="top d-flex justify-content-between align-items-center">
               <div className="Selected_Articles_top ">
                 <div className="Selected_Articles_top_right d-flex flex-column gap-3 justify-content-center  align-items-start">
@@ -106,8 +107,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="Category_section">
-          <div className="Category_section_content">
+        <section className="Category_section p-5">
+          <div className="Category_section_content ">
             <div className="Category_section_content_top d-flex flex-column gap-3 text-center align-items-center">
               <span className="online mt-4">مرحباً بك في عدسة</span>
               <h2>استكشف حسب الموضوع</h2>
@@ -118,6 +119,52 @@ export default function Home() {
                 {Category.map((category, index) => {
                   return <CategoryStyle key={index} categories={category} />;
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="recent_Articles  p-5 m-auto">
+          <div className="recent_Articles_inner  m-auto">
+            <div className="recent_Articles_inner_text d-flex justify-content-between align-items-end">
+              <div className="recent_Articles_inner_top_right d-flex flex-column gap-3   align-items-start">
+                <span className="online mt-4">الأحدث</span>
+                <h1>الأحدث أحدث المقالات</h1>
+                <p>محتوى جديد طازج من المطبعة</p>
+              </div>
+              <div className="recent_Articles_inner_top_left">
+                <p>
+                  عرض جميع المقالات <FontAwesomeIcon icon={faArrowLeft} />
+                </p>
+              </div>
+            </div>
+            <div className="recent_Articles_card row gy-3 ">
+              {Post.map((post) => {
+                return <ArticalCard key={post.id} post={post} />;
+              })}
+            </div>
+          </div>
+        </section>
+        <section className=" footer">
+          <div className="footer_inner p-5">
+            <div className="footer_inner_top row">
+              <div className="col-12 col-lg-3">
+                <div className="inner_footer m-auto">
+                  <div className="inner_footer_text">
+                    <span className="glass">ع</span>
+                    <p>عدسة</p>
+                  </div>
+                  <div className="inner_footer_text_middel">
+                    <p>
+                      مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار
+                      المحترفين ونصائح عملية لتطوير مهاراتكم.
+                    </p>
+                  </div>
+                  <div className="inner_footer_text_Icons">
+                    <span className="icon1">
+                      <FontAwesomeIcon icon={faTwitter} />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

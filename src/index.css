@@ -146,3 +146,49 @@ h1 {
 .inner_box:hover {
   background: linear-gradient(to right, #ff6900 70%, #fe6900);
 }
+.recent_Articles {
+  background-color: #140d0a;
+}
+.recent_Articles_inner {
+  width: 80%;
+}
+.recent_Articles_card_inner {
+  border: 2px solid #262626;
+}
+.techniq {
+  background-color: #0f0f0f;
+  color: white;
+}
+.bottom_img_right {
+  max-height: 3.125rem;
+}
+.arrow {
+  background-color: #f64d00;
+  color: white;
+  border-radius: 1.25rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+.footer {
+  background-color: #0a0a0a;
+  border-top: 0.0625rem solid #262626;
+}
+.footer_inner {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 0.625rem;
+  }
+  .hero_section {
+    width: 100%;
+    margin: auto;
+    padding: 1.25rem;
+  }
+  .Selected_Articles_inner {
+    width: 100%;
+    margin: auto;
+    padding: 1.25rem;
+  }
+}
