@@ -42,7 +42,7 @@ a {
 }
 
 .main {
-  background-color: #1d1d1d;
+  background-color: #0a0a0a;
 }
 .hero_section {
   background-color: #0a0a0a;
@@ -176,6 +176,67 @@ h1 {
 .footer_inner {
   width: 80%;
   margin: auto;
+}
+.icon1 {
+  background-color: #161616;
+  border: 0.0625rem solid #737373;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon1:hover {
+  background-color: #fe5e00;
+  transform: scale(1.1);
+}
+.glass {
+  background-color: #fe5e00;
+  font-size: 1.25rem;
+}
+
+.bord {
+  position: relative;
+}
+.bord::after {
+  content: "";
+  background-color: #fe5e00;
+  width: 1.25rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 50%;
+  right: -3.75rem;
+}
+.link_router {
+  transition: 0.3s;
+}
+.link_router:hover {
+  color: #fe5e00;
+  transform: translateX(-0.625rem);
+}
+.input_email {
+  background-color: #161616;
+  border: 0.0625rem solid #262626;
+}
+.input_email:focus {
+  outline-color: #ee5f0f;
+}
+.subscribe_btn {
+  background-color: #ee5f0f;
+  outline: none;
+  border: none;
+}
+.search_input {
+  background-color: #161616;
+  border: 0.0625rem solid #252525;
+}
+.category_btn {
+  background-color: #161616;
+  color: #9e9e9e !important;
+}
+.hero {
+  width: 80%;
+  /* background-color: #0a0a0a; */
 }
 @media (max-width: 768px) {
   :root {

@@ -35,7 +35,7 @@ export default function ArticalCard({ post }) {
                 {" "}
                 <FontAwesomeIcon icon={faStopwatch} /> {readTime} {date}{" "}
               </p>
-              <h2>{title}</h2>
+              <h2 className="  text-white">{title}</h2>
               <p>{excerpt}</p>
               <hr />
             </div>

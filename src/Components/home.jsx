@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ArticalCard from "./Artical-card";
+import Footer from "./footer";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faPen } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +11,12 @@ import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import Data from "../main.json";
 import Posts from "./Posts";
 import CategoryStyle from "./Category";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 export default function Home() {
   const [Post, SetPost] = useState([]);
   const [Category, SetCategory] = useState([]);
@@ -144,31 +150,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className=" footer">
-          <div className="footer_inner p-5">
-            <div className="footer_inner_top row">
-              <div className="col-12 col-lg-3">
-                <div className="inner_footer m-auto">
-                  <div className="inner_footer_text">
-                    <span className="glass">ع</span>
-                    <p>عدسة</p>
-                  </div>
-                  <div className="inner_footer_text_middel">
-                    <p>
-                      مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار
-                      المحترفين ونصائح عملية لتطوير مهاراتكم.
-                    </p>
-                  </div>
-                  <div className="inner_footer_text_Icons">
-                    <span className="icon1">
-                      <FontAwesomeIcon icon={faTwitter} />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Footer />
       </div>
     </>
   );
