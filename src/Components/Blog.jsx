@@ -11,6 +11,11 @@ export default function Blog() {
   const SelectedCategory = categoryFromHome.get("category");
 
   useEffect(() => {
+    if (SelectedCategory) {
+      Setcategory(SelectedCategory);
+    }
+  }, [SelectedCategory]);
+  useEffect(() => {
     category === "all"
       ? SetPost(Data.posts)
       : SetPost(
@@ -18,7 +23,7 @@ export default function Blog() {
             return post.category === category;
           }),
         );
-  }, [category]);
+  });
   return (
     <>
       <div className="main p-5 ">
