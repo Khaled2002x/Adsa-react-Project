@@ -6,9 +6,9 @@ import Posts from "./Artical-card";
 
 export default function Blog() {
   const [Post, SetPost] = useState([]);
-  const [category, Setcategory] = useState("all");
   const [categoryFromHome] = useSearchParams();
   const SelectedCategory = categoryFromHome.get("category");
+  const [category, Setcategory] = useState(SelectedCategory || "all");
 
   useEffect(() => {
     category === "all"
@@ -32,64 +32,86 @@ export default function Blog() {
               اكتشف الدروس والرؤى وأفضل الممارسات للتطوير الحديث
             </p>
           </div>
-          <div className="select_category d-flex  justify-content-between align-items-center ">
-            <div className="">
+          <div className="select_category d-flex flex-md-row w-100   gap-4 flex-column   justify-content-between align-items-center ">
+            <div className=" w-100">
               <input
                 type="text"
                 placeholder="بحث في مقالات "
                 className=" px-3 py-2 rounded-3 search_input text-white"
               />
             </div>
-            <div className="select_category_button  d-flex  align-items-center gap-3">
-              <button
-                onClick={() => {
-                  Setcategory("all");
-                }}
-                className="category_btn  p-3 rounded-4 text-white border-0"
-              >
-                جميع المقالات{" "}
-              </button>
-              <button
-                onClick={() => {
-                  Setcategory("إضاءة");
-                }}
-                className="category_btn p-3 rounded-4 text-white border-0"
-              >
-                إضاءة{" "}
-              </button>
 
-              <button
-                onClick={() => {
-                  Setcategory("بورتريه");
-                }}
-                className="category_btn p-3 rounded-4 text-white border-0"
-              >
-                بورتريه
-              </button>
-              <button
-                onClick={() => {
-                  Setcategory("تقنيات");
-                }}
-                className="category_btn p-3 rounded-4 text-white border-0"
-              >
-                تقنيات
-              </button>
-              <button
-                onClick={() => {
-                  Setcategory("معدات");
-                }}
-                className="category_btn p-3 rounded-4 text-white border-0"
-              >
-                معدات
-              </button>
-              <button
-                onClick={() => {
-                  Setcategory("مناظر طبيعية");
-                }}
-                className="category_btn p-3 rounded-4 text-white border-0"
-              >
-                مناظر طبيعية{" "}
-              </button>
+            <div className="select_category_button  w-100 row  g-3 ">
+              <div className="col-4 col-md-3">
+                <div
+                  className={`category_btn ${category === "all" ? "active" : ""}  rounded-4 text-white border-0`}
+                >
+                  <button
+                    onClick={() => {
+                      Setcategory("all");
+                    }}
+                    className={`categoryBtn  text-white `}
+                  >
+                    جميع المقالات{" "}
+                  </button>
+                </div>
+              </div>
+              <div className="col-4 col-md-3">
+                <div
+                  className={`category_btn  ${category === "إضاءة" ? "active" : ""} rounded-4 text-white border-0`}
+                >
+                  <button
+                    onClick={() => {
+                      Setcategory("إضاءة");
+                    }}
+                    className={`categoryBtn   text-white`}
+                  >
+                    إضاءة{" "}
+                  </button>
+                </div>
+              </div>
+              <div className="col-4 col-md-3">
+                <div
+                  className={`category_btn ${category === "بورتريه" ? "active" : ""}  rounded-4 text-white border-0`}
+                >
+                  <button
+                    onClick={() => {
+                      Setcategory("بورتريه");
+                    }}
+                    className={`categoryBtn   text-white`}
+                  >
+                    بورتريه
+                  </button>
+                </div>
+              </div>
+              <div className="col-4 col-md-3">
+                <div
+                  className={`category_btn text-center ${category === "تقنيات" ? "active" : ""} rounded-4 text-white border-0`}
+                >
+                  <button
+                    onClick={() => {
+                      Setcategory("تقنيات");
+                    }}
+                    className={`categoryBtn  text-white `}
+                  >
+                    تقنيات
+                  </button>
+                </div>
+              </div>
+              <div className="col-4 col-md-3">
+                <div
+                  className={`category_btn ${category === "معدات" ? "active" : ""} rounded-4 text-white border-0`}
+                >
+                  <button
+                    onClick={() => {
+                      Setcategory("معدات");
+                    }}
+                    className={`categoryBtn text-white`}
+                  >
+                    معدات
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div className="main_contenet">

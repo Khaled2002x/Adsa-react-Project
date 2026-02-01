@@ -28,16 +28,16 @@ export default function Footer() {
                   </p>
                 </div>
                 <div className="inner_footer_text_Icons d-flex   align-items-start gap-3">
-                  <span className="icon1">
+                  <span className="icon1 text-white">
                     <FontAwesomeIcon icon={faTwitter} />
                   </span>
-                  <span className="icon1">
+                  <span className="icon1 text-white">
                     <FontAwesomeIcon icon={faGithub} />
                   </span>
-                  <span className="icon1">
+                  <span className="icon1 text-white">
                     <FontAwesomeIcon icon={faLinkedin} />
                   </span>
-                  <span className="icon1">
+                  <span className="icon1 text-white">
                     <FontAwesomeIcon icon={faYoutube} />
                   </span>
                 </div>
