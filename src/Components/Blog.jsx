@@ -12,6 +12,13 @@ export default function Blog() {
       ? Setpost(Data.posts)
       : Setpost(Data.posts.filter((post) => post.category === category));
   }, [category]);
+  function smartSearch(value) {
+    Setpost(
+      Data.posts.filter((post) => {
+        return post.category.includes(value);
+      }),
+    );
+  }
 
   return (
     <>
@@ -29,6 +36,7 @@ export default function Blog() {
           <div className="select_category d-flex flex-md-row w-100   gap-4 flex-column   justify-content-between align-items-center ">
             <div className=" w-100">
               <input
+                onChange={(e) => smartSearch(e.target.value)}
                 type="text"
                 placeholder="بحث في مقالات "
                 className=" px-3 py-2 rounded-3 search_input text-white"

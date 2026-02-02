@@ -19,7 +19,7 @@ export default function Footer() {
               <div className="inner_footer m-auto d-flex flex-column gap-2">
                 <div className="inner_footer_text d-flex gap-2 align-items-center">
                   <span className="glass rounded-2 fw-bold px-3 py-2">ع</span>
-                  <p>عدسة</p>
+                  <p className=" text-white ">عدسة</p>
                 </div>
                 <div className="inner_footer_text_middel">
                   <p>
@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="col-12 col-lg-3">
               <div className="inner_footer_middel d-flex flex-column gap-4">
                 <div className="col_top">
-                  <h4 className="bord">استكشف</h4>
+                  <h4 className="bord text-white">استكشف</h4>
                 </div>
                 <div className="col_main  d-flex flex-column gap-2">
                   <Link to={"/"} className=" link_router text-decoration-none">
@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="col-12 col-lg-3">
               <div className="inner_footer_middel d-flex flex-column gap-4">
                 <div className="col_top">
-                  <h4 className="bord">التصنيفات</h4>
+                  <h4 className="bord text-white">التصنيفات</h4>
                 </div>
                 <div className="col_main  d-flex flex-column gap-2">
                   <Link to={"/"} className=" link_router text-decoration-none">
@@ -94,13 +94,13 @@ export default function Footer() {
             <div className="col-12 col-lg-3">
               <div className="inner_footer_middel d-flex flex-column gap-4">
                 <div className="col_top">
-                  <h4 className="bord">ابقى على اطلاع</h4>
+                  <h4 className="bord text-white">ابقى على اطلاع</h4>
                 </div>
                 <div className="col_main  d-flex flex-column gap-3 ">
                   <p>اشترك للحصول على أحدث المقالات والتحديثات.</p>
                   <input
                     type="email"
-                    className=" rounded-3 p-3  input_email "
+                    className=" rounded-3 p-3  input_email  "
                     placeholder="أدخل بريدك الإلكتروني"
                   />
                   <button className="subscribe_btn p-3 rounded-5 text-white">
