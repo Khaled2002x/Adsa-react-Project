@@ -2,11 +2,24 @@
   background-color: #161616 !important;
   color: white;
 }
+body {
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+
+  font-family:
+    "Tajawal",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+h1,
+h2 {
+  font-weight: bold;
 }
 ul {
   list-style: none;
@@ -23,6 +36,7 @@ ul {
 .content_brand_text_P {
   color: #ab5f0b;
 }
+
 p,
 button,
 a {
@@ -94,7 +108,6 @@ h1 {
 }
 .inner_info {
   background-color: #141414;
-  width: 9.375rem;
   border: 0.0625rem solid #262626;
 }
 .Selected_Articles {
@@ -104,7 +117,7 @@ h1 {
   background: linear-gradient(to right, #0a0a0a 60%, #160e0a);
 }
 .Selected_Articles_inner {
-  width: 80%;
+  width: 70%;
 }
 .Show_all {
   outline: none;
@@ -118,7 +131,15 @@ h1 {
   border: 0.125rem solid #323232;
   height: 25rem;
   cursor: pointer;
+  transition: 0.3s;
 }
+.inner_card:hover {
+  border-color: #5d2f0f;
+}
+.inner_card:hover .inner_card h2 {
+  color: #5d2f0f;
+}
+
 .spechial {
   background: linear-gradient(to right, #ff7500 80%, #f3a800);
 }
@@ -131,7 +152,7 @@ h1 {
 }
 .Category_section {
   border-top: 0.0625rem solid #323232;
-  background-color: #140d0a;
+  background-color: #0a0a0a;
 }
 .inner_box {
   background-color: #161616;
@@ -153,7 +174,7 @@ h1 {
   background: linear-gradient(to right, #ff6900 70%, #fe6900);
 }
 .recent_Articles {
-  background-color: #140d0a;
+  background-color: #0a0a0a;
 }
 .recent_Articles_inner {
   width: 80%;
@@ -169,11 +190,11 @@ h1 {
   max-height: 3.125rem;
 }
 .arrow {
-  background-color: #f64d00;
-  color: white;
+  background-color: #2e1e14;
+  color: #fc6601;
   border-radius: 1.25rem;
-  font-size: 2.5rem;
   cursor: pointer;
+  padding: 1.25rem;
 }
 .footer {
   background-color: #0a0a0a;
@@ -247,12 +268,14 @@ h1 {
 }
 .hero {
   width: 80%;
-  /* background-color: #0a0a0a; */
 }
 .categoryBtn {
   background-color: transparent;
   outline: none;
   border: none;
+}
+.inner_card_left {
+  background-color: #161616;
 }
 .category_btn.active {
   color: white;

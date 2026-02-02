@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Footer from "./footer";
-import { useSearchParams } from "react-router-dom";
 import Data from "../main.json";
 import Posts from "./Artical-card";
 
 export default function Blog() {
-  const [Post, SetPost] = useState([]);
-  const [categoryFromHome] = useSearchParams();
-  const SelectedCategory = categoryFromHome.get("category");
-  const [category, Setcategory] = useState(SelectedCategory || "all");
+  const [category, Setcategory] = useState("all");
+  const [Post, Setpost] = useState(Data.posts);
 
   useEffect(() => {
-    if (SelectedCategory) {
-      Setcategory(SelectedCategory);
-    }
-  }, [SelectedCategory]);
-  useEffect(() => {
     category === "all"
-      ? SetPost(Data.posts)
-      : SetPost(
-          Data.posts.filter((post) => {
-            return post.category === category;
-          }),
-        );
-  });
+      ? Setpost(Data.posts)
+      : Setpost(Data.posts.filter((post) => post.category === category));
+  }, [category]);
+
   return (
     <>
       <div className="main p-5 ">

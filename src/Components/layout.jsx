@@ -1,13 +1,15 @@
 import React from "react";
 import Navbar from "./navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./footer";
 
 export default function layout() {
+  const loc = useLocation();
+
   return (
     <>
       <Navbar />
-      <Outlet />
+      <Outlet key={loc.pathname} />
     </>
   );
 }

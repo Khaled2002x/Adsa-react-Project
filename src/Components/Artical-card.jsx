@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faStopwatch } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export default function ArticalCard({ post }) {
   const {
@@ -55,7 +55,7 @@ export default function ArticalCard({ post }) {
               </div>
               <div className="recent_Articles_card_bottom_left">
                 <FontAwesomeIcon
-                  icon={faArrowLeft}
+                  icon={faAngleLeft}
                   className="arrow p-1 rounded-circle "
                 />
               </div>

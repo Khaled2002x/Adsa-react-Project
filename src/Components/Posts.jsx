@@ -17,7 +17,7 @@ export default function Posts({ post }) {
     featured,
     date,
   } = post;
-  const { name, avatar, role } = author;
+  const { name, avatar, role } = post;
   return (
     <>
       <div className="col-12">
