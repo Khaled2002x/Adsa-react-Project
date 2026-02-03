@@ -11,18 +11,12 @@ import { faAddressBook } from "@fortawesome/free-solid-svg-icons";
 import Data from "../main.json";
 import Posts from "./Posts";
 import CategoryStyle from "./Category";
-import {
-  faGithub,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 export default function Home() {
   const [Post, SetPost] = useState([]);
   const [Category, SetCategory] = useState([]);
 
   useEffect(() => {
-    const printed_post = Data.posts;
+    const printed_post = [...Data.posts];
     printed_post.length = 3;
     SetPost(printed_post);
     SetCategory(Data.categories);
@@ -131,16 +125,18 @@ export default function Home() {
         </section>
         <section className="recent_Articles  p-5 m-auto">
           <div className="recent_Articles_inner  m-auto">
-            <div className="recent_Articles_inner_text d-flex justify-content-between align-items-end">
+            <div className="recent_Articles_inner_text d-flex justify-content-between align-items-center">
               <div className="recent_Articles_inner_top_right d-flex flex-column gap-3   align-items-start">
                 <span className="online mt-4">الأحدث</span>
                 <h1>الأحدث أحدث المقالات</h1>
                 <p>محتوى جديد طازج من المطبعة</p>
               </div>
               <div className="recent_Articles_inner_top_left">
-                <p>
-                  عرض جميع المقالات <FontAwesomeIcon icon={faArrowLeft} />
-                </p>
+                <Link to={"/Blog"}>
+                  <button className="Show_all  ">
+                    عرض الكل <FontAwesomeIcon icon={faArrowLeft} />{" "}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="recent_Articles_card row gy-3 ">

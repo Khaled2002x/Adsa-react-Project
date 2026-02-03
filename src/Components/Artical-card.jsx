@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faStopwatch } from "@fortawesome/free-solid-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export default function ArticalCard({ post }) {
   const {
-    id,
     slug,
     title,
     excerpt,
-    content,
+
     category,
     author,
     image,
@@ -17,7 +15,7 @@ export default function ArticalCard({ post }) {
   const { name, avatar, role } = author;
   return (
     <>
-      <div className="col-12 col-md-4">
+      <div className="col-12 col-md-6 col-lg-4 mb-4">
         <div className="inner recent_Articles_card_inner rounded-3  position-relative ">
           <div className="recent_Articles_card_top h-50  w-100">
             <img
@@ -35,8 +33,8 @@ export default function ArticalCard({ post }) {
                 {" "}
                 <FontAwesomeIcon icon={faStopwatch} /> {readTime} {date}{" "}
               </p>
-              <h2 className="  text-white">{title}</h2>
-              <p>{excerpt}</p>
+              <h2 className="  text-white artical_card_h2">{title}</h2>
+              <p className="artical_card_h2">{excerpt}</p>
               <hr />
             </div>
             <div className="recent_Articles_card_bottom_bottom d-flex justify-content-between align-items-center">
@@ -49,8 +47,10 @@ export default function ArticalCard({ post }) {
                   />
                 </div>
                 <div className="bottom_right_text">
-                  <p className=" fw-bold text-white m-0">{name}</p>
-                  <p className="m-0">{role}</p>
+                  <p className=" fw-bold artical_card_p text-white m-0">
+                    {name}
+                  </p>
+                  <p className="m-0 artical_card_p">{role}</p>
                 </div>
               </div>
               <div className="recent_Articles_card_bottom_left">

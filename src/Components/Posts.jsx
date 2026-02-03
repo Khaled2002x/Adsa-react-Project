@@ -5,18 +5,7 @@ import {
   faStopwatch,
 } from "@fortawesome/free-solid-svg-icons";
 export default function Posts({ post }) {
-  const {
-    image,
-    id,
-    title,
-    excerpt,
-    content,
-    category,
-    author,
-    readTime,
-    featured,
-    date,
-  } = post;
+  const { image, title, excerpt, category, readTime, date } = post;
   const { name, avatar, role } = post;
   return (
     <>

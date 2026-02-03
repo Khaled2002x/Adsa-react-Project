@@ -1,13 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import Home from "./Components/home.jsx";
-import Footer from "./Components/footer.jsx";
-import Navbar from "./Components/navbar.jsx";
 import Layout from "./Components/layout.jsx";
 import Blog from "./Components/Blog.jsx";
 const routes = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Layout />,
     children: [
       {
@@ -16,7 +14,7 @@ const routes = createBrowserRouter([
       },
 
       {
-        path: "/Blog",
+        path: "Blog",
         element: <Blog />,
       },
     ],

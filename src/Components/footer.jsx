@@ -12,7 +12,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 export default function Footer() {
   return (
     <>
-      <section className=" footer">
+      <section className=" footer position-relative bottom-0 w-100 mt-5 ">
         <div className="footer_inner p-5">
           <div className="footer_inner_top row  gx-5 gy-3">
             <div className="col-12 col-lg-3">
@@ -67,11 +67,14 @@ export default function Footer() {
                   <h4 className="bord text-white">التصنيفات</h4>
                 </div>
                 <div className="col_main  d-flex flex-column gap-2">
-                  <Link to={"/"} className=" link_router text-decoration-none">
+                  <Link
+                    to={"Blog?category=إضاءة"}
+                    className=" link_router text-decoration-none"
+                  >
                     إضاءة
                   </Link>
                   <Link
-                    to={"/Blog"}
+                    to={"/Blog?category=بورتريه"}
                     className="link_router text-decoration-none"
                   >
                     بورتريه
@@ -83,7 +86,7 @@ export default function Footer() {
                     تقنيات
                   </Link>
                   <Link
-                    to={"/Blog"}
+                    to={"/Blog?category=مناظر طبيعية"}
                     className="link_router text-decoration-none"
                   >
                     مناظر طبيعية
